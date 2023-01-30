@@ -77,6 +77,12 @@ app.use((req, res, next) => {
   next();
 });
 
+app.get("/", async (req, res) => {
+  res.status(200).send({
+    message: "Hello from Natours Family.",
+  });
+});
+
 // 3) ROUTES
 // app.get('/', (req, res) => {
 //   res.status(200).render('base', {
